@@ -6,8 +6,36 @@ valid_end: [0, 0],
 mother: "", // world volume has no mother
 type: "box",
 size: [20000.0, 20000.0, 20000.0], // mm, half-length
-material: "rock",
+material: "sea_water",
 invisible: 1,
+}
+
+{
+name: "GEO",
+index: "surrounding_water",
+valid_begin: [0, 0],
+valid_end: [0, 0],
+mother: "world",
+type: "tube",
+r_max: 7000.0,
+size_z: 7000.0,
+position: [0.0, 0.0, 0.0],
+material: "sea_water",
+color: [0.4, 0.4, 0.6, 0.1],
+}
+
+{
+name: "GEO",
+index: "tank",
+valid_begin: [0, 0],
+valid_end: [0, 0],
+mother: "surrounding_water",
+type: "tube",
+r_max: 3510.0,
+size_z: 3510.0,
+position: [0.0, 0.0, 0.0],
+material: "tyvek",
+color: [0.7, 0.2, 0.3, 0.1],
 }
 
 {
@@ -15,7 +43,7 @@ name: "GEO",
 index: "fiducial",
 valid_begin: [0, 0],
 valid_end: [0, 0],
-mother: "world",
+mother: "tank",
 type: "tube",
 r_max: 3500.0,
 size_z: 3500.0,

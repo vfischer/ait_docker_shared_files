@@ -18,7 +18,7 @@
 #END EVENT LOOP
 
 /generator/add combo gun:point
-/generator/vtx/set neutron  0 0 0 2.5e-8
 /generator/pos/set 0 0 0
 
+/generator/vtx/set e- 0 0 0 5
 /run/beamOn 1000
